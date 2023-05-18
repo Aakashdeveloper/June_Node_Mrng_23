@@ -1,0 +1,53 @@
+https://code.visualstudio.com/ (install)
+https://nodejs.org/en (install)
+https://git-scm.com/downloads (install)
+https://github.com/ (create account)
+https://github.com/Aakashdeveloper (follow)
+
+Add to Chrome
+> https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+NODE JS @ 7:00 AM (IST) By Mr.Aakash
+Day-1 https://youtu.be/PKhNSK_8HpU
+
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJs-Mongo-Express)
+Third Party Api (Weather Api)
+Redis v3  > 6379
+Node-Es6(.babel)
+Redis v4
+Redisv4 With Mongov5
+ImageUpload
+ImageUpload(formidable)
+MongoDb Basic >27017  (local/cloud)
+Zomato App backend
+Api with NodeJS(Rest)>1
+DashBoard(Crud)
+Swagger
+Testing
+Github
+--Deployment of app---
+render
+Pm2
+Nginx
+Jenkins
+Docker
+Email With Node(nodemailer)
+Login/Logout(JWT)
+Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
+Oauth(with google)
+TelegramChat
+GraphQl API
+Paytm-Payment
+Chatapp
+NodeJs with postgres
+FIREBASE
+S3 Imageupload
+AWS lambda micorservice
+--------NOT---------
+React/Angular
+Html/css/jquery
+
+NodeJS
+> Single threaded, Async, Non-Blocking I/O
