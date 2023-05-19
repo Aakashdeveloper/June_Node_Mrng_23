@@ -9,6 +9,7 @@ Add to Chrome
 
 NODE JS @ 7:00 AM (IST) By Mr.Aakash
 Day-1 https://youtu.be/PKhNSK_8HpU
+Day-2 https://youtu.be/WFkchCwELII
 
 NPM
 Basic NodeJS(in built)(Os,file,http)
@@ -51,3 +52,39 @@ Html/css/jquery
 
 NodeJS
 > Single threaded, Async, Non-Blocking I/O
+
+npm > node package manager
+> 163689
+
+
+JSON
+
+> Javascript Object Notation
+(way to represent data)
+(key value pair of data)
+[
+    {
+        "name":"Amit",
+        "city":"Delhi"
+    },
+    {
+        "name":"Nikita",
+        "city":"Pune",
+        "subject":"Fullstack"
+    }
+]
+
+////
+Package.json
+> Entry point to the app
+> Contains metadata (name,version,description)
+> Contains Scripts(start,build,test)
+> Packages we are using for the app
+
+
+/////Step to generate package.json////
+* NodeJs must be install in laptop
+> open cmd/terminal and go inside folder
+> npm init
+> Answer all questions
+> type "yes"
