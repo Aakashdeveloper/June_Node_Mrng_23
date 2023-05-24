@@ -17,6 +17,7 @@ Day-2 https://youtu.be/WFkchCwELII
 Day-3 https://youtu.be/gmOa05H7uiI
 
 NPM
+////////////
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
@@ -104,6 +105,12 @@ Package.json
 Node_modules > Contains all the packges
 package-lock > Dependency tree
 
+/////////
+var
+let
+const
+
+Prasad admin-8074588911
 
 Node Js Mr. Akash @  7:00am 
 Fee- 5,000/- (including GST) without
