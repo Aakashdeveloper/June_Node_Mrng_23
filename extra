@@ -15,6 +15,8 @@ NODE JS @ 7:00 AM (IST) By Mr.Aakash
 Day-1 https://youtu.be/PKhNSK_8HpU
 Day-2 https://youtu.be/WFkchCwELII
 Day-3 https://youtu.be/gmOa05H7uiI
+Day-4 https://youtu.be/9AG0gcN3XjI
+Day-5 https://youtu.be/eI-8ZHoyRKI
 
 NPM
 ////////////
@@ -109,6 +111,26 @@ package-lock > Dependency tree
 var
 let
 const
+
+/////////
+> Es5
+(Ecma Script)
+> Es6
+
+//es5
+function add(a,b){
+    return a+b
+}
+
+//es6
+const add = (a,b) =>  {return a+b}
+
+
+Local Dependency
+Dev dependency
+Global Dependency
+
+
 
 Prasad admin-8074588911
 
