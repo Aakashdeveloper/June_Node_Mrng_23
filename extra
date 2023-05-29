@@ -127,8 +127,32 @@ const add = (a,b) =>  {return a+b}
 
 
 Local Dependency
+> Local to the folder
+> Can be used in same folder only
+> npm i packagename
+
 Dev dependency
+> Just like normal dependency
+> Only use at the time development
+> npm i --save-dev packagename
+
+
 Global Dependency
+> Installed in the system
+> No Specific folder
+> Need admin permissions to install
+> Mainly use for Start build the app
+> Not added to package.json
+
+# window
+> open cmd as admin
+> npm i -g packagename
+
+# Mac/linuc
+> Open terminal
+> sudo npm i -g packagename
+** Nodemon
+> npm i -g nodemon
 
 
 
