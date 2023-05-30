@@ -125,6 +125,17 @@ function add(a,b){
 //es6
 const add = (a,b) =>  {return a+b}
 
+//es5
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+//es6
+let a = 10
+let b = `my age is ${a}`
+"my age is 10"
+
+
 
 Local Dependency
 > Local to the folder
