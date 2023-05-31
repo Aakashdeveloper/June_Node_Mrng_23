@@ -1,35 +1,27 @@
 let express = require('express');
 let app = express();
-let categoryRouter = express.Router();
-let productRouter = express.Router();
-let port = 8812;
+let categoryRouter = require('./src/controller/categoryRouter');
+let productRouter = require('./src/controller/productRouter');
+let morgan = require('morgan');
+let fs = require('fs');
+let dotenv = require('dotenv');
+dotenv.config();
+let port = process.env.PORT || 9101;
+
+// static file path
+app.use(express.static(__dirname+'/public'));
+//html file path
+app.set('views','./src/views');
+// view engine name
+app.set('view engine', 'ejs')
+
+
+//middleware
+app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))
 
 app.get('/',function(req,res){
     res.send('Hi From Express Default Route')
 })
-
-// default Route of category
-categoryRouter.route('/')
-    .get(function(req,res){
-        res.send('This is Catgeory route')
-    })
-
-
-//detail route of category
-categoryRouter.route('/details')
-    .get(function(req,res){
-        res.send('This is Catgeory Details route')
-    })
-
-productRouter.route('/')
-    .get(function(req,res){
-        res.send('This is Product route')
-    })
-
-productRouter.route('/details')
-    .get(function(req,res){
-        res.send('This is products details')
-    })
 
 app.use('/category',categoryRouter)
 app.use('/products',productRouter)
