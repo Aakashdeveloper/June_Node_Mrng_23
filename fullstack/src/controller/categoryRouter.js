@@ -1,7 +1,7 @@
 let express = require('express');
 let categoryRouter = express.Router();
 
-let category = [
+let data = [
     {
         "id":1,
         "category": "Fashion",
@@ -27,7 +27,8 @@ let category = [
 // default Route of category
 categoryRouter.route('/')
     .get(function(req,res){
-        res.send(category)
+        //res.send(category)
+        res.render('category',{title:'Category Page',data})
     })
 
 

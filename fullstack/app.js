@@ -15,12 +15,12 @@ app.set('views','./src/views');
 // view engine name
 app.set('view engine', 'ejs')
 
-
 //middleware
 app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))
 
 app.get('/',function(req,res){
-    res.send('Hi From Express Default Route')
+    //res.send('Hi From Express Default Route')
+    res.render('index',{title:"Home Page"})
 })
 
 app.use('/category',categoryRouter)
