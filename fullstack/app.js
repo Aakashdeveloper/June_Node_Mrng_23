@@ -1,12 +1,19 @@
 let express = require('express');
 let app = express();
-let categoryRouter = require('./src/controller/categoryRouter');
-let productRouter = require('./src/controller/productRouter');
 let morgan = require('morgan');
 let fs = require('fs');
 let dotenv = require('dotenv');
 dotenv.config();
 let port = process.env.PORT || 9101;
+
+let menu = [
+    {link:'/',name:'Home'},
+    {link:'/category',name:'Category'},
+    {link:'/products',name:'Products'}
+]
+
+let categoryRouter = require('./src/controller/categoryRouter')(menu);
+let productRouter = require('./src/controller/productRouter')(menu);
 
 // static file path
 app.use(express.static(__dirname+'/public'));
@@ -20,7 +27,7 @@ app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))
 
 app.get('/',function(req,res){
     //res.send('Hi From Express Default Route')
-    res.render('index',{title:"Home Page"})
+    res.render('index',{title:"Home Page",menu})
 })
 
 app.use('/category',categoryRouter)
