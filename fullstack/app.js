@@ -5,6 +5,7 @@ let fs = require('fs');
 let dotenv = require('dotenv');
 dotenv.config();
 let port = process.env.PORT || 9101;
+const {dbConnect} = require('./src/controller/dbController')
 
 let menu = [
     {link:'/',name:'Home'},
@@ -35,6 +36,7 @@ app.use('/products',productRouter)
 
 //create server
 app.listen(port,function(err){
+    dbConnect();
     if(err) throw err;
     console.log(`Server is running on port ${port}`)
 })
