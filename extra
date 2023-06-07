@@ -19,9 +19,9 @@ Day-4 https://youtu.be/9AG0gcN3XjI
 Day-5 https://youtu.be/eI-8ZHoyRKI
 
 NPM
-////////////
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
+////////////
 Third Party Api (Weather Api)
 Redis v3  > 6379
 Node-Es6(.babel)
@@ -166,6 +166,9 @@ Global Dependency
 > npm i -g nodemon
 
 
+event loop
+thread pool
+
 
 Prasad admin-8074588911
 
@@ -190,5 +193,16 @@ Branch Code: 001627
 Branch:  Ameerpet
 
 Note: If you want to use Phonepe or Google Pay then follow  below steps
-You can find the option Bank Transfer in Phonepe and Google pay. There you can enter our bank account number and you can transfer the amount. 
+You can find the option Bank Transfer in Phonepe and Google pay. There you can enter
 Please mention your Name on the receipt and send a email once the payment is done send the payment screenshot  to support@nareshit.com and also to ADMIN PRASAD 8074588911
+
+
+Params
+> What we pass after /
+> If defiend then complosury to pass
+> Need to define in url
+
+QueryParams
+> What we pass after ?
+> not complosury to pass 
+> no need to define

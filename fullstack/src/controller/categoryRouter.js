@@ -5,8 +5,10 @@ const {getData} = require('./dbController')
 function router(menu){
     // default Route of category
     categoryRouter.route('/')
-        .get(function(req,res){
+        .get(async(req,res)=>{
             //res.send(category)
+            let query = {};
+            let data = await getData('catgeory',query)
             res.render('category',{title:'Category Page',data,menu})
         })
 
