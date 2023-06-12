@@ -1,7 +1,5 @@
-//let express = require('express');
-//let request = require('request');
-import express from 'express';
-import request from 'request';
+let express = require('express');
+let request = require('request');
 let port = process.env.PORT || 7660;
 let app = express();
 
@@ -19,6 +17,7 @@ app.get('/weather',(req,res) => {
         res.render('index',{title:'Weather App',result:output})
         //res.send(output)
     })
+    
 })
 
 app.listen(port,(err) => {

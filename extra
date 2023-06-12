@@ -22,8 +22,8 @@ NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
-////////////
 Node-Es6(.babel)
+////////////
 Redis v3  > 6379
 
 Redis v4
@@ -207,3 +207,14 @@ QueryParams
 > What we pass after ?
 > not complosury to pass 
 > no need to define
+
+
+/////
+Redis
+KEYS *
+set key value
+get keyname
+del keyname
+FLUSHALL
+
+set keyname value ex time

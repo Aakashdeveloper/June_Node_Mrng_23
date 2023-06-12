@@ -4,8 +4,8 @@
   "description": "this is weather app",
   "main": "index.js",
   "scripts": {
-    "start":"node app.js",
-    "dev":"nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [
     "node"
@@ -13,6 +13,9 @@
   "author": "developerfunnel",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/register": "^7.22.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "request": "^2.88.2"
