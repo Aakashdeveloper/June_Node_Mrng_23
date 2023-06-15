@@ -26,12 +26,10 @@ Node-Es6(.babel)
 Redis v3  > 6379
 Redis v4
 Redisv4 With Mongov5
-////////////
-
 ImageUpload
-
 ImageUpload(formidable)
 S3 Imageupload
+////////////
 MongoDb Basic >27017  (local/cloud)
 Zomato App backend
 Api with NodeJS(Rest)>1
@@ -55,7 +53,6 @@ Paytm-Payment
 Chatapp
 NodeJs with postgres
 FIREBASE
-
 AWS lambda micorservice
 --------NOT---------
 React/Angular
