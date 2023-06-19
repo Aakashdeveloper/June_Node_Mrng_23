@@ -27,6 +27,29 @@ C:/data/db
                 > Cluster Tier (M0 Sandbox)
                     > Create Cluster
 
+
+
+Database Access
+    > Add New Database User
+        > Add username
+            Auto generated password  (Save this password)
+                > Built-in Role
+                    Atlas Admin
+                        > Add User
+
+Network Access
+    > Add IP Address
+        > 0.0.0.0/0
+          Any Comment
+
+
+Browser Collection
+    > Create Database
+    > Create Collection
+
+
+mongodb+srv://admin:MKJg6gg7@cluster0.f8vmc.mongodb.net/?retryWrites=true&w=majority
+
 unstructured
 
 SQL
@@ -90,3 +113,5 @@ Select      Find
 Insert      Insert
 Update      Update
 Delete      Delete
+
+
