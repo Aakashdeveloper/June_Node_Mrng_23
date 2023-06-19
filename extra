@@ -21,14 +21,15 @@ Day-5 https://youtu.be/eI-8ZHoyRKI
 NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
-////////////
 Third Party Api (Weather Api)
-Redis v3  > 6379
 Node-Es6(.babel)
+Redis v3  > 6379
 Redis v4
 Redisv4 With Mongov5
 ImageUpload
 ImageUpload(formidable)
+S3 Imageupload
+////////////
 MongoDb Basic >27017  (local/cloud)
 Zomato App backend
 Api with NodeJS(Rest)>1
@@ -52,7 +53,6 @@ Paytm-Payment
 Chatapp
 NodeJs with postgres
 FIREBASE
-S3 Imageupload
 AWS lambda micorservice
 --------NOT---------
 React/Angular
@@ -206,3 +206,14 @@ QueryParams
 > What we pass after ?
 > not complosury to pass 
 > no need to define
+
+
+/////
+Redis
+KEYS *
+set key value
+get keyname
+del keyname
+FLUSHALL
+
+set keyname value ex time
