@@ -218,3 +218,15 @@ del keyname
 FLUSHALL
 
 set keyname value ex time
+
+
+C > Create > POST
+R > Read   > GET
+U > Update > PUT
+D > Delete > DELETE
+
+
+idempotent vs non idempotent
+
+CORS
+Cross Origin resource sharing
