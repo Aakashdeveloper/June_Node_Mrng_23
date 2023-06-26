@@ -2,10 +2,12 @@ let express = require('express');
 let app = express();
 let dotenv = require('dotenv');
 dotenv.config();
+let mongo = require('mongodb');
 let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT;
-let {dbConnect,getData,getDataSort,getDataSortLimit} = require('./Controller/dbController');
+let {dbConnect,getData,getDataSort,getDataSortLimit,
+    postData} = require('./Controller/dbController');
 
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -91,6 +93,57 @@ app.get('/filters/:mealId',async(req,res) => {
     let collection = "restaurants";
     let output = await getDataSortLimit(collection,query,sort,skip,limit);
     res.send(output);
+})
+
+//restaurants details
+app.get('/details/:id', async(req,res) => {
+    //let id = Number(req.params.id);
+    //let query = {restaurant_id:id};
+    let _id = mongo.ObjectId(req.params.id);
+    let query = {_id}
+    let output = await getData("restaurants",query)
+    res.send(output)
+})
+
+//menu details
+app.get('/menu/:id',async(req,res)=>{
+    let id = Number(req.params.id);
+    let query = {restaurant_id:id};
+    let output = await getData("menu",query)
+    res.send(output)
+})
+
+
+//meny details {"id":[4,3,5]}
+app.post('/menuDetails',async(req,res)=>{
+    if(Array.isArray(req.body.id)){
+        let query = {menu_id:{$in:req.body.id}};
+        let collection = 'menu';
+        let output = await getData(collection,query);
+        res.send(output)
+    }else{
+        res.send('Please pass data as array like {"id":[4,3,5]}')
+    }
+})
+
+//placeorder
+app.post('/placeOrder',async(req,res) => {
+    let data = req.body;
+    let collection = 'orders';
+    let response = await postData(collection,data)
+    res.send(response)
+})
+
+
+//orders
+app.get('/orders',async(req,res) => {
+    let query = {};
+    if(req.query.email){
+        query={email:req.query.email}
+    }
+    let collection = 'orders';
+    let output = await getData(collection,query)
+    res.send(output)
 })
 
 app.listen(port,() => {

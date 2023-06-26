@@ -41,10 +41,21 @@ async function getDataSortLimit(colName,query,sort,skip,limit){
     return output
 }
 
+async function postData(colName,data){
+    let output;
+    try{
+        output = await db.collection(colName).insert(data)
+    } catch(err){
+        output = {'Error':`Error While fetching from ${colName}`}
+    }
+    return output
+}
+
 
 module.exports = {
     dbConnect,
     getData,
     getDataSort,
-    getDataSortLimit
+    getDataSortLimit,
+    postData
 }
