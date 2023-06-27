@@ -6,13 +6,22 @@ let mongo = require('mongodb');
 let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT;
+let authKey = "june"+process.env.KEY;
 let {dbConnect,getData,getDataSort,getDataSortLimit,
-    postData} = require('./Controller/dbController');
+    postData, updateData, deleteData} = require('./Controller/dbController');
 
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors())
+
+function auth(key){
+    if(key == authKey){
+        return true
+    }else{
+        return false
+    }
+}
 
 //get heart beat
 app.get('/',(req,res) => {
@@ -21,36 +30,47 @@ app.get('/',(req,res) => {
 
 // list of city
 app.get('/location', async(req,res) => {
-    let query = {};
-    let collection = "location";
-    let output = await getData(collection,query);
-    res.send(output);
+    let userKey = req.header('x-basic-token')
+    if(auth(userKey)){
+        let query = {};
+        let collection = "location";
+        let output = await getData(collection,query);
+        res.send(output);
+    }else{
+        res.send('Unauneticated User')
+    }
+    
 })
 
 // list of restaurants
 app.get('/restaurants',async(req,res) => {
-    let query = {};
-    let stateId = Number(req.query.stateId);
-    let mealId = Number(req.query.mealId);
-    if(mealId && stateId){
-        query={
-            "mealTypes.mealtype_id":mealId,
-            state_id:stateId
+    let userKey = req.header('x-basic-token')
+    if(auth(userKey)){
+        let query = {};
+        let stateId = Number(req.query.stateId);
+        let mealId = Number(req.query.mealId);
+        if(mealId && stateId){
+            query={
+                "mealTypes.mealtype_id":mealId,
+                state_id:stateId
+            }
         }
-    }
-    else if(mealId){
-        query={
-            "mealTypes.mealtype_id":mealId
+        else if(mealId){
+            query={
+                "mealTypes.mealtype_id":mealId
+            }
         }
-    }
-    else if(stateId){
-        query = {
-            state_id:stateId
+        else if(stateId){
+            query = {
+                state_id:stateId
+            }
         }
+        let collection = "restaurants";
+        let output = await getData(collection,query);
+        res.send(output);
+    }else{
+        res.send('Unauneticated User')
     }
-    let collection = "restaurants";
-    let output = await getData(collection,query);
-    res.send(output);
 })
 
 // list of Meal
@@ -145,6 +165,34 @@ app.get('/orders',async(req,res) => {
     let output = await getData(collection,query)
     res.send(output)
 })
+
+
+//update data
+app.put('/updateOrder', async(req,res) => {
+    let collection = 'orders';
+    let condition = {"_id":mongo.ObjectId(req.body._id)}
+    let data = {
+        $set:{
+            "status":req.body.status
+        }
+    }
+    let output = await updateData(collection,condition,data)
+    res.send(output)
+})
+
+//delete order
+app.delete('/deleteOrder',async(req,res) => {
+    let collection = 'orders'
+    let condition = {"_id":mongo.ObjectId(req.body._id)}
+    let rowcount = await getData(collection,condition);
+    if(rowcount.length > 0){
+        let response = await deleteData(collection,condition)
+        res.send(response)
+    }else{
+        res.send('No Order Found')
+    }
+})
+
 
 app.listen(port,() => {
     dbConnect()
