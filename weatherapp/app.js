@@ -2,6 +2,8 @@
 //let request = require('request');
 import express from 'express';
 import request from 'request';
+import path from 'path';
+const __dirname = path.resolve();
 let port = process.env.PORT || 7660;
 let app = express();
 

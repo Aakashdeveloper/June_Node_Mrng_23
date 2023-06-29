@@ -6,7 +6,7 @@
   "scripts": {
     "start":"node apiWithoutui.js",
     "dev":"nodemon apiWithoutui.js",
-    "ui":"node apiWithui.js"
+    "ui":"nodemon apiWithui.js"
   },
   "keywords": [],
   "author": "",
