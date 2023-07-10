@@ -1,5 +1,3 @@
-let data ={
+module.exports = {
     'secert':'supersecert'
 }
-
-export default data;

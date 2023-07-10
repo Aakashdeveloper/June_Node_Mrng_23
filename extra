@@ -42,18 +42,19 @@ Pm2
 Jenkins
 Nginx
 Email With Node(nodemailer)
+Login/Logout(JWT)
 ////////////
 Docker
 
-Login/Logout(JWT)
+
 
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
-Oauth(with google)
-
 TelegramChat
-GraphQl API
-Chatapp
 
+Oauth(with google)
+GraphQl API
+
+Chatapp
 Paytm-Payment
 NodeJs with postgres
 
