@@ -46,13 +46,15 @@ Login/Logout(JWT)
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 TelegramChat
 Oauth(with google)
-////////////
-Docker
 GraphQl API
+////////////
 
+NodeJs with postgres
+
+Docker
 Chatapp
 Paytm-Payment
-NodeJs with postgres
+
 
 FIREBASE
 AWS lambda micorservice
