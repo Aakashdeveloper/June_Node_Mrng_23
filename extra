@@ -47,20 +47,20 @@ Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-ap
 TelegramChat
 Oauth(with google)
 GraphQl API
-////////////
-
 NodeJs with postgres
-
 Docker
 Chatapp
 Paytm-Payment
-
-
 FIREBASE
+////////////
 AWS lambda micorservice
 --------NOT---------
 React/Angular
 Html/css/jquery
+
+
+
+npm i -g firebase
 
 NodeJS
 > Single threaded, Async, Non-Blocking I/O
@@ -243,3 +243,6 @@ pm2 status
 pm2 stop filename
 
 pm2 start app.js -i processNumber
+
+
+firebase deploy
